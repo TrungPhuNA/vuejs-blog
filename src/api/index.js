@@ -7,6 +7,7 @@ export default {
     article: {
         list: api + 'articles/',
         detail: api + 'articles/',
-        menu: api + 'articles/menu/'
+        menu: api + 'articles/menu/',
+        relate: api + 'articles/relate/'
     }
 }

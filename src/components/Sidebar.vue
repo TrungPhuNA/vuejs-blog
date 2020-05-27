@@ -5,7 +5,7 @@
                 <router-link  :to=" { name: 'page.menu.item', params : { slug : menu.mn_slug, id : menu.id }} ">{{ menu.mn_name}}</router-link>
                 <ul v-if="menu.children" class="sub-menu">
                     <li v-for="item in menu.children" :key="item.id">
-                        <router-link :active="isActive" :to=" { name: 'page.menu.item', params : { slug : item.mn_slug, id : item.id }} ">{{ item.mn_name}}</router-link>
+                        <router-link  :to=" { name: 'page.menu.item', params : { slug : item.mn_slug, id : item.id }} ">{{ item.mn_name}}</router-link>
                     </li>
                 </ul>
             </li>

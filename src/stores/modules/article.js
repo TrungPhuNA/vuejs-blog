@@ -5,7 +5,8 @@ export default {
     state: {
         articles: [],
         articleByMenuId : [],
-        articlesById : null
+        articlesById : null,
+        articlesRelate : {},
     },
     mutations: {
         setArticles(state, data) {
@@ -16,12 +17,16 @@ export default {
         },
         setArticleByMenu(state, data) {
             state.articleByMenuId =  data;
-        }
+        },
+        setArticlesRelate(state, data) {
+            state.articlesRelate =  data;
+        },
     },
     getters: {
         listArticles: state => state.articles,
         articlesById: state => state.articlesById,
-        articlesByMenu: state => state.articleByMenuId
+        articlesByMenu: state => state.articleByMenuId,
+        articlesRelate : state => state.articlesRelate
     },
     actions: {
         async loadArticles({commit}, params) {
@@ -33,7 +38,6 @@ export default {
                 commit('setArticles', response.data)
         },
         async getArticleByMenuId({commit}, params) {
-            console.log(params);
             let response = await axios.get(API.article.menu + params.menuID, {
                 params
             });
@@ -42,9 +46,18 @@ export default {
                 commit('setArticleByMenu', response.data)
         },
         async getArticleDetail({commit}, id) {
+            console.log(API.article.detail + id);
             let response = await axios.get(API.article.detail  + id);
             if (response.data) {
                 commit('setArticlesDetail', response.data)
+            }
+        },
+
+        async getArticleRelate({commit}, id) {
+            console.log(API.article.relate + id);
+            let response = await axios.get(API.article.relate  + id);
+            if (response.data) {
+                commit('setArticlesRelate', response.data)
             }
         }
     }
