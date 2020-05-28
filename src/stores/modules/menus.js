@@ -20,6 +20,7 @@ export default {
     },
     actions: {
         async loadMenus({commit}) {
+
             let response = await axios.get(API.menu.list);
             console.log(API.menu.list);
             if (response.data)

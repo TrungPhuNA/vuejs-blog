@@ -77,7 +77,7 @@
             flex-wrap: wrap;
             .item {
                 padding: 10px;
-                flex:  0 0 23%;
+                flex:  0 0 32%;
                 box-shadow: 0 0 15px rgba(0,0,0,.1);
                 margin-right: 10px;
                 margin-bottom: 10px;
@@ -98,6 +98,11 @@
                 }
                 &-title {
                     margin: 5px 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
                     a {
                         font-size: 20px;
                         color: #292b2c;

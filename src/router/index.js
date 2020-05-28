@@ -6,11 +6,7 @@ import MenuPage from "./../pages/menu/_id";
 import ArticlePage from "./../pages/article";
 import ArticleDetail from "./../pages/article/_id";
 
-
-import Meta from 'vue-meta'
-
 Vue.use(Router)
-Vue.use(Meta)
 
 export default new Router({
     mode: 'history',

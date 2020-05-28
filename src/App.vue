@@ -38,7 +38,13 @@
     h1 {
         font-size: 25px !important;
         color: #212121;
+        font-weight: 600 !important;
         margin-bottom: 10px !important;
+    }
+    h2 {
+        font-weight: 500 !important;
+        font-size: 22px;
+        margin: 10px 0;
     }
     .main {
         display: flex;
@@ -101,6 +107,7 @@
             border-radius: 2px;
             position: relative;
             padding: 10px;
+            margin: 15px 0;
         }
         ol, ul {
             margin-left: 20px;
