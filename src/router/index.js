@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import HomePage from "./../pages/home/index";
 import MenuPage from "./../pages/menu/_id";
 import ArticlePage from "./../pages/article";
+import ContactPage from "./../pages/contact";
 import ArticleDetail from "./../pages/article/_id";
 
 Vue.use(Router)
@@ -20,6 +21,11 @@ export default new Router({
             path: '/bai-viet.htm',
             name : 'page.article',
             component: ArticlePage
+        },
+        {
+            path: '/lien-he.htm',
+            name : 'page.contact',
+            component: ContactPage
         },
         {
             path: '/bai-viet/:slug-:id(\\d+).htm',

@@ -10,6 +10,9 @@
                     <a href="https://www.youtube.com/channel/UCzloMZCKVhxiGKSVH7zJZkA"  target="_blank"><i class="fas fa-youtube" ></i>Youtube</a>
                 </li>
                 <li>
+                    <router-link :to="{ name : 'page.contact'}"><i class="fas fa-envelope-open-o"></i> Gủi liên hệ</router-link>
+                </li>
+                <li>
                     <router-link :to=" { name: 'page.article'} "><i class="fas fa-pen"></i> Bài viết</router-link>
                 </li>
                 <li>
