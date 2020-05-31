@@ -1,6 +1,7 @@
 <template>
     <div class="menu-list">
         <h1>{{ menuDetail.mn_name }} </h1>
+        <div class="content" v-html="menuDetail.mn_content"></div>
         <Articles :listArticles="articlesByMenu" @nexPage="nexPage"/>
     </div>
 </template>

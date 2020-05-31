@@ -10,7 +10,7 @@
                 </h3>
             </div>
             <div class="item-footer">
-                <span><i class="fas fa-eye"></i> 2</span>
+                <span><i class="fas fa-eye"></i> {{ article.a_view}}</span>
                 <span><i class="fas fa-clock"></i>{{ article.created_at}}</span>
             </div>
         </div>

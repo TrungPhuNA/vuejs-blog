@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <vue-progress-bar></vue-progress-bar>
         <Header />
         <div id="main" class="main">
             <Sidebar />
@@ -17,12 +18,23 @@
     import Header from './components/Header'
     import Sidebar from './components/Sidebar'
     export default {
+        data() {
+            return {
+
+            }
+        },
         components: {
             Header,
             Sidebar
         },
         mounted() {
+            this.$Progress.finish()
+        },
 
+        created() {
+            //  [App.vue specific] When App.vue is first loaded start the progress bar
+            this.$Progress.start()
+            this.$Progress.finish()
         }
     }
 </script>
@@ -110,7 +122,9 @@
             margin: 15px 0;
         }
         ol, ul {
-            margin-left: 20px;
+            margin-left: 4px;
+            margin-bottom: 15px;
+            margin-top: 15px;
             li {
                 margin-bottom: 0.5rem;
                 line-height: 1.5rem;

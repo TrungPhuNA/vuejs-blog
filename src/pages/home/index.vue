@@ -13,7 +13,10 @@
             return {
                 paramsDefault : {
                     page : 1
-                }
+                },
+                currentPage: 0,
+                pageCount: 0,
+                numPages : 10
             }
         },
         metaInfo() {

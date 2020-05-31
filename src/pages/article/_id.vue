@@ -1,7 +1,7 @@
 <template>
     <div class="article-detail">
         <h1>{{ articlesById ?  articlesById.a_name : '' }}</h1>
-        <div class="content" v-html="articlesById ?  articlesById.a_content : ''"></div>
+        <div class="content" v-htwml="articlesById ?  articlesById.a_content : ''"></div>
         <h2 class="title-heading-h2">Bài viết liên quan</h2>
         <div class="articles-ralate">
             <div class="list">
@@ -11,7 +11,7 @@
                     </h3>
                     <p class=""><a href="">By Admin</a></p>
                     <div class="item-footer">
-                        <span><i class="fas fa-eye"></i> 2</span>
+                        <span><i class="fas fa-eye"></i> {{ article.a_view}}</span>
                         <span><i class="fas fa-clock"></i>{{ article.created_at}}</span>
                     </div>
                 </div>
