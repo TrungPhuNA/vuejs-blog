@@ -130,6 +130,10 @@
                 line-height: 1.5rem;
             }
         }
+        ul {
+            list-style: disc;
+            margin-left: 40px;
+        }
         img {
             max-width: 100%;
             height: auto !important;

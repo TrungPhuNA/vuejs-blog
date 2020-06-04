@@ -33,16 +33,9 @@ export default {
         },
 
         async getMenuDetail({  commit  }, id) {
-            let key = 'menus_'+ id;
-            if (localStorage.getItem(key)) {
-                commit('setMenuItem', JSON.parse(localStorage.getItem(key)));
-                return
-            }
-
             console.log(API.menu.detail + id);
             let response = await axios.get(API.menu.detail  + id);
             if (response.data) {
-                localStorage.setItem(key, JSON.stringify(response.data));
                 commit('setMenuItem', response.data)
             }
         }
