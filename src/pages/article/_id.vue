@@ -7,9 +7,9 @@
             <div class="list">
                 <div class="item" v-for="article in articlesRelate" :key="article.id">
                     <h3 class="item-title">
-                        <a href="">{{ article.a_name}}</a>
+                        <router-link  :to=" { name: 'page.article.detail', params : { slug : article.a_slug, id: article.id }} ">{{ article.a_name}}</router-link>
                     </h3>
-                    <p class=""><a href="">By Admin</a></p>
+                    <p class=""><a href="#">By Admin</a></p>
                     <div class="item-footer">
                         <span><i class="fas fa-eye"></i> {{ article.a_view}}</span>
                         <span><i class="fas fa-clock"></i>{{ article.created_at}}</span>
