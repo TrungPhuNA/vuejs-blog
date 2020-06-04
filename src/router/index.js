@@ -4,8 +4,9 @@ import Router from 'vue-router'
 import HomePage from "./../pages/home/index";
 import MenuPage from "./../pages/menu/_id";
 import ArticlePage from "./../pages/article";
-import ContactPage from "./../pages/contact";
 import ArticleDetail from "./../pages/article/_id";
+import ContactPage from "./../pages/contact";
+
 
 Vue.use(Router)
 

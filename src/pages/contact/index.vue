@@ -8,7 +8,7 @@
 
             <div class="form-group">
                 <label for="email">Email <span class="cRed">(*)</span></label>
-                <input name="email"  v-validate="'required|email'" v-model="emtry.email" id="email" type="email" class="form-control" placeholder="Nhập email">
+                <input name="email"   v-model="emtry.email" id="email" type="email" class="form-control" placeholder="Nhập email">
             </div>
 
             <div class="form-group">
@@ -28,22 +28,22 @@
 
 <script>
 
-    import { email, required } from 'vuelidate/lib/validators';
-    import formMixin from './../../mixins/form';
-    import axios from "axios";
+    // import { email, required } from 'vuelidate/lib/validators';
+    // import formMixin from './../../mixins/form';
+    // import axios from "axios";
 
 
     export default {
         components : {
 
         },
-        mixins: [ formMixin],
-        validations: {
-            email: {
-                required,
-                email,
-            },
-        },
+        // mixins: [ formMixin],
+        // validations: {
+        //     email: {
+        //         required,
+        //         email,
+        //     },
+        // },
         data() {
             return {
                 emtry : {
@@ -56,30 +56,32 @@
         },
         methods : {
             validateBeforeSubmit() {
-                this.$validator.validateAll().then((result) => {
-                    if (result) {
-                        // eslint-disable-next-line
-                        alert('Form Submitted!');
-                        return;
-                    }
-
-                    alert('Correct them errors!');
-                });
+                // this.$validator.validateAll().then((result) => {
+                //     if (result) {
+                //         // eslint-disable-next-line
+                //         alert('Form Submitted!');
+                //         return;
+                //     }
+                //
+                //     alert('Correct them errors!');
+                // });
             },
 
              saveContact() {
-                let data = this.emtry;
-
-                 axios.post('http://127.0.0.1:1999/api/contacts', {
-                    data
-                })
-                .then(function (response) {
-                    console.log(response);
-                    alert("OK");
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                //  this.$swal('Hello Vue world!!!');
+                //  return;
+                // let data = this.emtry;
+                //
+                //  axios.post('http://127.0.0.1:1999/api/contacts', {
+                //     data
+                // })
+                // .then(function (response) {
+                //     console.log(response);
+                //     alert("OK");
+                // })
+                // .catch(function (error) {
+                //     console.log(error);
+                // });
             }
         }
     }

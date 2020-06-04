@@ -1,7 +1,7 @@
 <template>
     <div class="article-detail">
         <h1>{{ articlesById ?  articlesById.a_name : '' }}</h1>
-        <div class="content" v-htwml="articlesById ?  articlesById.a_content : ''"></div>
+        <div class="content" v-html="articlesById ?  articlesById.a_content : ''"></div>
         <h2 class="title-heading-h2">Bài viết liên quan</h2>
         <div class="articles-ralate">
             <div class="list">
@@ -51,6 +51,7 @@
             }
         },
         created() {
+            console.log(this.$route.params.id);
             this.getArticleDetail(this.$route.params.id);
         },
 

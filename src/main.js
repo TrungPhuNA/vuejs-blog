@@ -4,6 +4,18 @@ import router from './router'
 import store from './stores/index';
 import VueProgressBar from 'vue-progressbar'
 
+import VueSweetalert2 from 'vue-sweetalert2';
+
+const optionsVueSweetalert2 = {
+    toast: true,
+    showConfirmButton: false,
+    confirmButtonColor: '#41b882',
+    cancelButtonColor: '#ff7674',
+    position: 'top-end',
+};
+
+Vue.use(VueSweetalert2, optionsVueSweetalert2);
+
 Vue.use(VueProgressBar, {
     color: "rgb(143, 255, 199)",
     failedColor: "red",
@@ -17,6 +29,7 @@ Vue.use(VueMeta, {
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
+import 'sweetalert2';
 
 Vue.config.productionTip = false
 
