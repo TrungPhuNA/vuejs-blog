@@ -122,7 +122,7 @@
             margin: 15px 0;
         }
         ol, ul {
-            margin-left: 4px;
+            margin-left: 40px;
             margin-bottom: 15px;
             margin-top: 15px;
             li {
@@ -131,8 +131,7 @@
             }
         }
         ul {
-            list-style: disc;
-            margin-left: 40px;
+            list-style: circle;
         }
         img {
             max-width: 100%;
