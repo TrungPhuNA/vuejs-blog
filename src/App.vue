@@ -130,5 +130,9 @@
                 line-height: 1.5rem;
             }
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 </style>
