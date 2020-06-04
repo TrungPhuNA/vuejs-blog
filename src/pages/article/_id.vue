@@ -25,7 +25,7 @@
     export default {
         data() {
             return {
-
+                title: 'This will be the title'
             }
         },
         methods : {
@@ -37,7 +37,7 @@
             ...mapGetters(["articlesById","articlesRelate"]),
             getArticlesById() {
                 return this.articlesById;
-            }
+            },
         },
         watch : {
             getArticlesById : {
@@ -46,6 +46,12 @@
                     if (data != null) {
                         this.getArticleRelate(data.a_menu_id)
                     }
+                },
+                deep: true
+            },
+            '$route.path': {
+                handler: function () {
+                    this.getArticleDetail(this.$route.params.id);
                 },
                 deep: true
             }
